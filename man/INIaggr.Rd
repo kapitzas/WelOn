@@ -10,14 +10,14 @@ INIaggr(vec)
 \item{vec}{A numeric value. This is the first value of a sequence.}
 }
 \value{
-A matrix with 1 row and 3 columns: Sample size \code{n = 1}, current mean \code{mean = vec} and current M2, \code{M2 = 0}, which is the average distance to \code{vec} to \code{mean}, so initially 0.
+A matrix with \code{length(vec)} rows and 3 columns: Sample size \code{n = 1}, current mean \code{mean[i] = vec[i]} and current M2, \code{M2 = 0}, which is the average distance to \code{vec[i]} to \code{mean[i]}, so initially 0.
 }
 \description{
 This function initiates the output matrix for Welford's Online algorithm.
 }
 \examples{
-seq <- c(1:10)
-m <- INIrun(seq[1])
+seq <- matrix(sample(1:100, 100), ncol = 5)
+m <- INIaggr(seq[1,])
 }
 \author{
 Simon Kapitza \email{kapitzas@student.unimelb.edu.au}

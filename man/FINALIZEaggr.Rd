@@ -16,16 +16,17 @@ A matrix with 1 row and 3 columns: Current size \code{n}, current mean \code{mea
 This function converts \code{M2} to unbiased Variance \code{var} and exports the final statistics.
 }
 \examples{
-#' seq <- c(1:10)
-m <- INIrun(seq[1])
-for (i in 2:10){
-m <- updatestats(m, seq[i])
+seq <- matrix(sample(1:100, 100), ncol = 5)
+m <- INIaggr(seq[1,])
+for (i in 2:20){
+m <- UPDATEaggr(m, seq[i,])
 }
 
-mfin <- finalize(m)
-all(mfin[1] == length(seq),
-mfin[2] == mean(seq),
-mfin[3] == var(seq)
+mfin <- FINALIZEaggr(m)
+all(
+all.equal(mfin[1,1], nrow(seq)),
+all.equal(mfin[,2], colMeans(seq)),
+all.equal(mfin[,3], apply(seq, 2, FUN = "var"))
 )
 
 }
