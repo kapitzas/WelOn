@@ -7,6 +7,8 @@
 #' seq <- matrix(sample(1:100, 100), ncol = 5)
 #' m <- INIaggr(seq[1,])
 #' @author Simon Kapitza \email{kapitzas@student.unimelb.edu.au}
+#' @references Welford, B P. “Note on a Method for Calculating Corrected Sums of Squares and Products.” Technometrics 4, no. 3 (1962): 419–20.
+
 #' @export
 
 INIaggr <- function(vec){

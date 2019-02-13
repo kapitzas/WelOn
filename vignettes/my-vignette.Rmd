@@ -1,0 +1,21 @@
+---
+title: "WelOn"
+author: "Simon Kapitza"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{WelOn}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This package contains functions implementing Welford's Online algorithm to update statistics sequentially without having to store all values of a sequence. This is useful when there are memory constraints and computational efficiency is not essential. The functions are leaned on a python implementation, available on Wikipedia: https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford%27s_Online_algorithm
+
+The package contains three functions: INIaggr() sets up the output matrix, UPDATEaggr() updates the aggregate statistics and FINALIZEaggr() estimates the unbiased variance and exports the final statistics of the sequence. Sequences can be sequences of numeric values or numeric vectors.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/UPDATEaggr.R
 \name{UPDATEaggr}
 \alias{UPDATEaggr}
-\title{Update sequence statitistics}
+\title{Update sequence statitistics using Welford's Online algorithm}
 \usage{
 UPDATEaggr(aggr, newvalue)
 }
@@ -21,6 +21,9 @@ m <- INIaggr(seq[1,])
 for (i in 2:20){
 m <- UPDATEaggr(m, seq[i,])
 }
+}
+\references{
+Welford, B P. “Note on a Method for Calculating Corrected Sums of Squares and Products.” Technometrics 4, no. 3 (1962): 419–20.
 }
 \author{
 Simon Kapitza \email{kapitzas@student.unimelb.edu.au}

@@ -16,7 +16,7 @@
 #' all.equal(mfin[,2], colMeans(seq)),
 #' all.equal(mfin[,3], apply(seq, 2, FUN = "var"))
 #' )
-#'
+#' @references Welford, B P. “Note on a Method for Calculating Corrected Sums of Squares and Products.” Technometrics 4, no. 3 (1962): 419–20.
 #' @author Simon Kapitza \email{kapitzas@student.unimelb.edu.au}
 #' @export
 
