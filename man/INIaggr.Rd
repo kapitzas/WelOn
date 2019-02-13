@@ -7,7 +7,7 @@
 INIaggr(vec)
 }
 \arguments{
-\item{vec}{A numeric value. This is the first value of a sequence.}
+\item{vec}{A single value or numeric vector. First sample of a sequence of samples.}
 }
 \value{
 A matrix with \code{length(vec)} rows and 3 columns: Sample size \code{n = 1}, current mean \code{mean[i] = vec[i]} and current M2, \code{M2 = 0}, which is the average distance to \code{vec[i]} to \code{mean[i]}, so initially 0.
